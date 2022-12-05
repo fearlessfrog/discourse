@@ -1097,7 +1097,7 @@ task "uploads:downsize" => :environment do
   default_image_pixels = 1_000_000 # 1 megapixel
 
   max_image_pixels = [
-    ARGV[0]&.to_i || default_image_pixels,
+    ARGV[1]&.to_i || default_image_pixels,
     min_image_pixels
   ].max
 
